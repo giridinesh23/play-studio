@@ -1,0 +1,85 @@
+import type { Project } from "@/types";
+
+export const portfolio: Project[] = [
+  {
+    id: "thai-king-visit",
+    title: "Thai King Visit in Bhutan",
+    client: "Wozer Events",
+    category: "event",
+    date: "April 28, 2025",
+    description:
+      "We provided the full professional sound system for the prestigious event during the King of Thailand's visit to Bhutan — a milestone reflecting the trust placed in our team at the highest level.",
+    image: "https://www.dailybhutan.com/media/4488/his-majesty-the-druk-gyalpo-and-his-majesty-the-king-of-thailand-offer-butter-lamps-at-the-buddha-dordenma-in-kuenselphodrang.jpg",
+  },
+  {
+    id: "kalachakra",
+    title: "Bhutan Global Peace (Kalachakra) Entertainment Section",
+    client: "Dessup Sound & Lights / Film Association of Bhutan",
+    category: "event",
+    date: "November 19, 2025",
+    description:
+      "While the global peace puja took place during daytime, we handled the entertainment events every night for 15 days. The main program on November 11th was dedicated to His Majesty the Fourth King Jigme Singye Wangchuk, featuring popular Bhutanese bands, singers, musicians, and an orchestral performance.",
+    image: "https://www.breathebhutan.com/wp-content/uploads/2025/10/Global-Peace-Prayer-Festival-2025.jpg",
+  },
+  {
+    id: "national-day-2025",
+    title: "National Day Celebration 2025 — Bumthang",
+    client: "Government of Bhutan",
+    category: "event",
+    date: "December 17, 2025",
+    description:
+      "Our lead audio technician designed and delivered the complete sound system for the 2025 National Day celebration in Bumthang. The mission: ensure every word spoken by His Majesty the Druk Gyalpo was heard with perfect clarity by every citizen.",
+    image: "https://www.dailybhutan.com/media/4912/lingkathang-in-wangduechholing-palace-national-day-2025.jpg",
+  },
+  // TODO: Client to provide more portfolio projects
+  {
+    id: "corporate-conference",
+    title: "Corporate Conference — Thimphu",
+    client: "TBD",
+    category: "event",
+    date: "",
+    description: "Details coming soon.",
+    image: "/images/portfolio/placeholder.jpg",
+    placeholder: true,
+  },
+  {
+    id: "live-concert",
+    title: "Live Concert Production",
+    client: "TBD",
+    category: "event",
+    date: "",
+    description: "Details coming soon.",
+    image: "/images/portfolio/placeholder.jpg",
+    placeholder: true,
+  },
+  {
+    id: "studio-session",
+    title: "Studio Recording Session",
+    client: "TBD",
+    category: "recording",
+    date: "",
+    description: "Details coming soon.",
+    image: "/images/portfolio/placeholder.jpg",
+    placeholder: true,
+  },
+  {
+    id: "karaoke-treatment",
+    title: "Karaoke Room Acoustic Treatment",
+    client: "TBD",
+    category: "acoustic",
+    date: "",
+    description: "Details coming soon.",
+    image: "/images/portfolio/placeholder.jpg",
+    placeholder: true,
+  },
+  {
+    id: "festival-production",
+    title: "Festival Sound Production",
+    client: "TBD",
+    category: "event",
+    date: "",
+    description: "Details coming soon.",
+    image: "/images/portfolio/placeholder.jpg",
+    placeholder: true,
+  },
+];

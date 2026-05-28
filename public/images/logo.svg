@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="400" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B2D7B"/>
+      <stop offset="100%" stop-color="#1B1445"/>
+    </linearGradient>
+  </defs>
+  <!-- Music note stem + flag -->
+  <path d="M295 45 C295 45, 340 30, 345 80 L345 85 C345 85, 340 50, 295 65 L295 260" stroke="url(#g1)" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- Flag -->
+  <path d="M295 45 C320 35, 345 40, 345 75 C340 55, 315 50, 295 60 Z" fill="url(#g1)"/>
+  <!-- Vinyl record outer circle -->
+  <circle cx="185" cy="250" r="170" fill="url(#g1)"/>
+  <!-- Vinyl grooves -->
+  <circle cx="185" cy="250" r="145" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <circle cx="185" cy="250" r="125" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <circle cx="185" cy="250" r="105" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Vinyl grooves - curved lines at top -->
+  <path d="M95 130 C120 105, 160 90, 200 95" stroke="rgba(255,255,255,0.25)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M80 155 C110 120, 155 100, 210 108" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M70 180 C100 140, 150 115, 220 125" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Center label area -->
+  <circle cx="185" cy="250" r="70" fill="rgba(255,255,255,0.95)"/>
+  <!-- Play triangle -->
+  <path d="M165 215 L165 285 L220 250 Z" fill="url(#g1)"/>
+  <!-- Tonearm / connector piece at bottom right of record -->
+  <rect x="280" y="310" width="22" height="45" rx="5" fill="url(#g1)" transform="rotate(-25, 291, 332)"/>
+  <!-- Tonearm connector dots -->
+  <circle cx="288" cy="322" r="3" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="288" cy="334" r="3" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="288" cy="346" r="3" fill="rgba(255,255,255,0.6)"/>
+</svg>
