@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
   {
     question: "What is your cancellation policy?",
     answer:
-      "Cancellations made more than 14 days before the hire date receive a full refund (excluding the non-refundable deposit). 7–14 days: 50% refund. 3–7 days: 25% refund. Less than 72 hours: no refund. All cancellations must be submitted in writing to hello@playstudio.bt.",
+      "Cancellations made more than 14 days before the hire date receive a full refund (excluding the non-refundable deposit). 7–14 days: 50% refund. 3–7 days: 25% refund. Less than 72 hours: no refund. All cancellations must be submitted in writing to playstudiobhutan@gmail.com.",
   },
   {
     question: "Can I visit the studio before booking?",

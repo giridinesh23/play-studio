@@ -67,7 +67,7 @@ export const terms: TermsSection[] = [
   {
     id: "cancellation",
     title: "6. Cancellation & Refunds",
-    content: `All cancellations must be submitted in writing to hello@playstudio.bt.
+    content: `All cancellations must be submitted in writing to playstudiobhutan@gmail.com.
 
 | Notice Period | Refund |
 |---|---|

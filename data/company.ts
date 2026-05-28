@@ -7,7 +7,7 @@ export const company: CompanyInfo = {
   hours: "Monday – Sunday: 9:00 AM – 6:00 PM",
   appointmentOnly: true,
   yearsInBusiness: 10,
-  email: "hello@playstudio.bt", // TODO: Confirm actual email address
+  email: "playstudiobhutan@gmail.com",
   phone: "", // TODO: Add phone number
   whatsapp: "", // TODO: Add WhatsApp number
   social: {
