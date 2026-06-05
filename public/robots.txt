@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://playstudiobhutan.com
+
+# Sitemaps
+Sitemap: https://playstudiobhutan.com/sitemap.xml
