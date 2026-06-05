@@ -39,17 +39,16 @@ export default function Navbar() {
     >
       <Container>
         <nav className="flex items-center justify-between h-20" aria-label="Main navigation">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center group">
             <Image
-              src="/images/logo.svg"
-              alt="Play Studio Logo"
-              width={40}
-              height={44}
-              className="group-hover:scale-105 transition-transform"
+              src="/images/logo-wordmark.png"
+              alt="Play Studio"
+              width={180}
+              height={50}
+              priority
+              unoptimized
+              className="group-hover:scale-[1.02] transition-transform"
             />
-            <span className="font-montserrat font-bold text-xl tracking-wider text-text group-hover:text-accent transition-colors">
-              PLAY STUDIO
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
