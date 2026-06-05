@@ -71,10 +71,11 @@ export default function Hero() {
           className="mb-6"
         >
           <Image
-            src="/images/logo.svg"
+            src="/images/logo-icon.png"
             alt="Play Studio Logo"
             width={120}
-            height={132}
+            height={120}
+            unoptimized
             className="mx-auto"
             priority
           />
