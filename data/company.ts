@@ -8,12 +8,13 @@ export const company: CompanyInfo = {
   appointmentOnly: true,
   yearsInBusiness: 10,
   email: "playstudiobhutan@gmail.com",
-  phone: "", // TODO: Add phone number
-  whatsapp: "", // TODO: Add WhatsApp number
+  phone: "+975 77106969",
+  whatsapp: "+975 77106969",
   social: {
-    facebook: "", // TODO: Add actual Facebook URL
-    instagram: "", // TODO: Add actual Instagram URL
-    youtube: "https://www.youtube.com/@UCKMOJX80b9HzHs9BojJTtaQ",
+    facebook: "https://www.facebook.com/playstudiobhutan/",
+    instagram: "https://www.instagram.com/playstudio_bhutan/",
+    youtube: "",
+    tiktok: "https://www.tiktok.com/@play_studio_bhutan",
   },
   coordinates: { lat: 27.4661, lng: 89.6419 },
 };

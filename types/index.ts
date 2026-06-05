@@ -85,6 +85,7 @@ export interface CompanyInfo {
     facebook: string;
     instagram: string;
     youtube: string;
+    tiktok: string;
   };
   coordinates: { lat: number; lng: number };
 }
