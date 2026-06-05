@@ -102,14 +102,13 @@ export default function Footer() {
               )}
               {company.whatsapp && (
                 <li>
-                  WhatsApp:{" "}
                   <a
                     href={whatsappHref(company.whatsapp)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
                   >
-                    {company.whatsapp}
+                    WhatsApp: {company.whatsapp}
                   </a>
                 </li>
               )}

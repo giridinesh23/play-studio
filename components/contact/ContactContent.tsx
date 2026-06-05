@@ -211,6 +211,18 @@ export default function ContactContent() {
                   {status === "loading" ? "Sending..." : "Send Message"}
                 </button>
 
+                {company.whatsapp && (
+                  <a
+                    href={whatsappHref(company.whatsapp)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 border border-accent text-accent font-montserrat font-semibold text-sm uppercase tracking-wider py-3 rounded-lg hover:bg-accent hover:text-dark transition-colors"
+                  >
+                    <ChatBubbleLeftRightIcon className="w-5 h-5" />
+                    Chat on WhatsApp
+                  </a>
+                )}
+
                 {status === "success" && (
                   <motion.p
                     initial={{ opacity: 0, y: 10 }}
@@ -293,7 +305,7 @@ export default function ContactContent() {
                         rel="noopener noreferrer"
                         className="text-text-muted text-sm hover:text-accent transition-colors"
                       >
-                        {company.whatsapp}
+                        WhatsApp: {company.whatsapp}
                       </a>
                     </div>
                   </div>
