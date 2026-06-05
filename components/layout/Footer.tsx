@@ -4,6 +4,9 @@ import { company, navLinks } from "@/data/company";
 import { services } from "@/data/services";
 import Container from "@/components/ui/Container";
 
+const telHref = (phone: string) => `tel:${phone.replace(/\s/g, "")}`;
+const whatsappHref = (phone: string) => `https://wa.me/${phone.replace(/\D/g, "")}`;
+
 export default function Footer() {
   return (
     <footer className="bg-dark/80 border-t border-purple/10 relative">
@@ -86,7 +89,30 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-text-muted">
               <li>{company.address}</li>
-              {company.phone && <li>Phone: {company.phone}</li>}
+              {company.phone && (
+                <li>
+                  Phone:{" "}
+                  <a
+                    href={telHref(company.phone)}
+                    className="hover:text-accent transition-colors"
+                  >
+                    {company.phone}
+                  </a>
+                </li>
+              )}
+              {company.whatsapp && (
+                <li>
+                  WhatsApp:{" "}
+                  <a
+                    href={whatsappHref(company.whatsapp)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    {company.whatsapp}
+                  </a>
+                </li>
+              )}
               <li>
                 Email:{" "}
                 <a
@@ -107,7 +133,6 @@ export default function Footer() {
             </ul>
             {/* Social Media Icons */}
             <div className="flex gap-4 mt-4">
-              {/* TODO: Add actual social media URLs */}
               {company.social.facebook && (
                 <a
                   href={company.social.facebook}
@@ -144,6 +169,19 @@ export default function Footer() {
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+              )}
+              {company.social.tiktok && (
+                <a
+                  href={company.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-accent transition-colors"
+                  aria-label="TikTok"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.3 0 .6.05.89.14V9.4a6.33 6.33 0 00-.89-.06A6.34 6.34 0 003.15 15.67a6.34 6.34 0 0010.84 4.48 6.3 6.3 0 001.86-4.48v-7a8.16 8.16 0 004.74 1.52V6.72c-.34 0-.67-.01-1-.03z" />
                   </svg>
                 </a>
               )}

@@ -12,6 +12,7 @@ import {
   ClockIcon,
   EnvelopeIcon,
   PhoneIcon,
+  ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/outline";
 
 interface FormData {
@@ -34,6 +35,9 @@ const serviceOptions = [
   "Equipment Rental",
   "Other",
 ];
+
+const telHref = (phone: string) => `tel:${phone.replace(/\s/g, "")}`;
+const whatsappHref = (phone: string) => `https://wa.me/${phone.replace(/\D/g, "")}`;
 
 export default function ContactContent() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -269,11 +273,31 @@ export default function ContactContent() {
                     <PhoneIcon className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-text text-sm font-semibold">Phone</p>
-                      <p className="text-text-muted text-sm">{company.phone}</p>
+                      <a
+                        href={telHref(company.phone)}
+                        className="text-text-muted text-sm hover:text-accent transition-colors"
+                      >
+                        {company.phone}
+                      </a>
                     </div>
                   </div>
                 )}
-                {/* TODO: Add WhatsApp number */}
+                {company.whatsapp && (
+                  <div className="flex items-start gap-3">
+                    <ChatBubbleLeftRightIcon className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-text text-sm font-semibold">WhatsApp</p>
+                      <a
+                        href={whatsappHref(company.whatsapp)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-text-muted text-sm hover:text-accent transition-colors"
+                      >
+                        {company.whatsapp}
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Map */}
@@ -290,15 +314,25 @@ export default function ContactContent() {
 
               {/* Social Links */}
               <div className="flex gap-4 justify-center">
-                {/* TODO: Add actual social media URLs */}
-                {["Facebook", "Instagram", "YouTube"].map((name) => (
-                  <span
-                    key={name}
-                    className="w-10 h-10 bg-card border border-border rounded-full flex items-center justify-center text-text-muted text-xs hover:border-accent hover:text-accent transition-colors cursor-pointer"
-                    title={name}
+                {[
+                  { name: "Facebook", href: company.social.facebook },
+                  { name: "Instagram", href: company.social.instagram },
+                  { name: "TikTok", href: company.social.tiktok },
+                  { name: "YouTube", href: company.social.youtube },
+                ]
+                  .filter((social) => social.href)
+                  .map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-card border border-border rounded-full flex items-center justify-center text-text-muted text-xs hover:border-accent hover:text-accent transition-colors"
+                    title={social.name}
+                    aria-label={social.name}
                   >
-                    {name[0]}
-                  </span>
+                    {social.name[0]}
+                  </a>
                 ))}
               </div>
             </motion.div>
