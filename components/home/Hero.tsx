@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 function GoldParticles() {
@@ -119,6 +120,9 @@ export default function Hero() {
           </Button>
         </motion.div>
       </div>
+
+      {/* WhatsApp */}
+      <WhatsAppFloat />
 
       {/* Scroll indicator */}
       <motion.div

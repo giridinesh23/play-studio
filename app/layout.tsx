@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Nunito } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -92,7 +91,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <WhatsAppFloat />
       </body>
     </html>
   );
