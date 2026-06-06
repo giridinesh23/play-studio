@@ -32,14 +32,14 @@ export default function TrustedBy() {
           {[...clients, ...clients].map((client, i) => (
             <div
               key={i}
-              className="mx-8 flex-shrink-0 w-44 h-24 bg-white/5 border border-border rounded-xl flex items-center justify-center p-4 overflow-hidden"
+              className="mx-6 flex-shrink-0 w-36 h-20 border border-border rounded-lg overflow-hidden"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={120}
-                height={60}
-                className="object-contain max-h-14 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={144}
+                height={80}
+                className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}

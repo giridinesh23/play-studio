@@ -39,7 +39,7 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-nunito: "Nunito", sans-serif;
 
-  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee: marquee 18s linear infinite;
   --animate-float: float 3s ease-in-out infinite;
   --animate-pulse-gold: pulse-gold 2s ease-in-out infinite;
   --animate-shimmer: shimmer 3s ease-in-out infinite;
