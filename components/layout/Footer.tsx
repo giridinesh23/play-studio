@@ -15,18 +15,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Column 1: Company */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Image
-                src="/images/logo.svg"
-                alt="Play Studio Logo"
-                width={36}
-                height={40}
-              />
-              <h3 className="font-montserrat font-bold text-xl tracking-wider text-text">
-                PLAY STUDIO
-              </h3>
-            </div>
-            <p className="text-accent text-sm italic mb-4">{company.tagline}</p>
+            <Image
+              src="/images/logo-wordmark.png"
+              alt="Play Studio"
+              width={140}
+              height={53}
+              unoptimized
+              className="mb-3"
+            />
+            <p className="text-accent text-sm italic mb-3">{company.tagline}</p>
             <p className="text-text-muted text-sm leading-relaxed">
               Bhutan&apos;s premier professional audio-visual production company.
               Sound system rental, acoustic treatment, and recording studio based
