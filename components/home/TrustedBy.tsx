@@ -1,13 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import Container from "@/components/ui/Container";
 
-export default function TrustedBy() {
-  // TODO: Replace with actual client logos when provided
-  const placeholders = Array.from({ length: 8 }, (_, i) => `Client Logo ${i + 1}`);
+const clients = [
+  { name: "Terma Linca Thimphu", logo: "/images/clients/terma-linca.jpg" },
+  { name: "IQOS", logo: "/images/clients/iqos.jpg" },
+  { name: "Pemako", logo: "/images/clients/pemako.jpg" },
+  { name: "Snow Leopard Theater", logo: "/images/clients/snow-leopard-theater.jpg" },
+  { name: "Wozer Events", logo: "/images/clients/wozer-events.jpg" },
+];
 
+export default function TrustedBy() {
   return (
     <section className="py-16 bg-dark/40 border-y border-purple/8 overflow-hidden">
       <Container>
@@ -23,14 +29,18 @@ export default function TrustedBy() {
       </Container>
       <div className="relative">
         <div className="flex animate-marquee whitespace-nowrap">
-          {[...placeholders, ...placeholders].map((label, i) => (
+          {[...clients, ...clients].map((client, i) => (
             <div
               key={i}
-              className="mx-8 flex-shrink-0 w-36 h-16 bg-card border border-border rounded-lg flex items-center justify-center"
+              className="mx-8 flex-shrink-0 w-44 h-24 bg-white/5 border border-border rounded-xl flex items-center justify-center p-4 overflow-hidden"
             >
-              <span className="text-text-muted text-xs font-montserrat">
-                {label}
-              </span>
+              <Image
+                src={client.logo}
+                alt={client.name}
+                width={120}
+                height={60}
+                className="object-contain max-h-14 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
             </div>
           ))}
         </div>
