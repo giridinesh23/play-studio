@@ -15,9 +15,13 @@ export default function WhatsAppFloat() {
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ delay: 2, duration: 0.4, type: "spring", stiffness: 200 }}
-      className="fixed bottom-6 left-6 z-50 group"
+      animate={{ scale: 1, opacity: 1, y: [0, -8, 0] }}
+      transition={{
+        scale: { delay: 2, duration: 0.4, type: "spring", stiffness: 200 },
+        opacity: { delay: 2, duration: 0.4 },
+        y: { delay: 2.4, duration: 2, repeat: Infinity, ease: "easeInOut" },
+      }}
+      className="fixed bottom-20 left-5 z-50 group"
     >
       <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-dark/90 text-text text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border shadow-lg">
         Chat with us
