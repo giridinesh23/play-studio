@@ -43,11 +43,11 @@ export default function Navbar() {
             <Image
               src="/images/logo-wordmark.png"
               alt="Play Studio"
-              width={180}
-              height={50}
+              width={240}
+              height={67}
               priority
               unoptimized
-              className="group-hover:scale-[1.02] transition-transform"
+              className="group-hover:scale-[1.02] transition-transform w-[140px] sm:w-[160px] lg:w-[200px] xl:w-[240px] h-auto"
             />
           </Link>
 
