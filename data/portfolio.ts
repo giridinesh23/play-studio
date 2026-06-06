@@ -2,6 +2,26 @@ import type { Project } from "@/types";
 
 export const portfolio: Project[] = [
   {
+    id: "mama-mia-reimagined",
+    title: "Mama Mia Reimagined",
+    client: "Snow Leopard Theatre",
+    category: "event",
+    date: "May 5, 9, and 11, 2026",
+    description:
+      "Play Studio delivered complete lighting and sound support for Snow Leopard Theatre's Mama Mia Reimagined at the Royal Textile Academy, ensuring a polished stage experience across separate performance days for international and local audiences.",
+    image: "/images/portfolio/mama-mia-reimagined.jpg",
+  },
+  {
+    id: "sangay-siddhartha",
+    title: "Sangay Siddhartha",
+    client: "Snow Leopard Theatre",
+    category: "event",
+    date: "October 10, 2025",
+    description:
+      "Play Studio provided professional lighting and sound for Snow Leopard Theatre's Sangay Siddhartha at the Royal University of Bhutan, supporting a refined theatrical production presented to both international and local audiences.",
+    image: "/images/portfolio/sangay-siddhartha.jpg",
+  },
+  {
     id: "thai-king-visit",
     title: "Thai King Visit in Bhutan",
     client: "Wozer Events",
@@ -30,56 +50,5 @@ export const portfolio: Project[] = [
     description:
       "Our lead audio technician designed and delivered the complete sound system for the 2025 National Day celebration in Bumthang. The mission: ensure every word spoken by His Majesty the Druk Gyalpo was heard with perfect clarity by every citizen.",
     image: "https://www.dailybhutan.com/media/4912/lingkathang-in-wangduechholing-palace-national-day-2025.jpg",
-  },
-  // TODO: Client to provide more portfolio projects
-  {
-    id: "corporate-conference",
-    title: "Corporate Conference — Thimphu",
-    client: "TBD",
-    category: "event",
-    date: "",
-    description: "Details coming soon.",
-    image: "/images/portfolio/placeholder.jpg",
-    placeholder: true,
-  },
-  {
-    id: "live-concert",
-    title: "Live Concert Production",
-    client: "TBD",
-    category: "event",
-    date: "",
-    description: "Details coming soon.",
-    image: "/images/portfolio/placeholder.jpg",
-    placeholder: true,
-  },
-  {
-    id: "studio-session",
-    title: "Studio Recording Session",
-    client: "TBD",
-    category: "recording",
-    date: "",
-    description: "Details coming soon.",
-    image: "/images/portfolio/placeholder.jpg",
-    placeholder: true,
-  },
-  {
-    id: "karaoke-treatment",
-    title: "Karaoke Room Acoustic Treatment",
-    client: "TBD",
-    category: "acoustic",
-    date: "",
-    description: "Details coming soon.",
-    image: "/images/portfolio/placeholder.jpg",
-    placeholder: true,
-  },
-  {
-    id: "festival-production",
-    title: "Festival Sound Production",
-    client: "TBD",
-    category: "event",
-    date: "",
-    description: "Details coming soon.",
-    image: "/images/portfolio/placeholder.jpg",
-    placeholder: true,
   },
 ];
