@@ -13,6 +13,8 @@ const clients = [
   { name: "Wozer Events", logo: "/images/clients/wozer-events.jpg" },
 ];
 
+const carouselClients = [...clients, ...clients];
+
 export default function TrustedBy() {
   return (
     <section className="py-16 bg-dark/40 border-y border-purple/8 overflow-hidden">
@@ -28,18 +30,19 @@ export default function TrustedBy() {
         </motion.p>
       </Container>
       <div className="relative">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...clients, ...clients].map((client, i) => (
+        <div className="flex w-max animate-marquee whitespace-nowrap">
+          {[...carouselClients, ...carouselClients].map((client, i) => (
             <div
-              key={i}
-              className="mx-6 flex-shrink-0 w-36 h-20 border border-border rounded-lg overflow-hidden"
+              key={`${client.name}-${i}`}
+              className="mx-4 flex-shrink-0 w-32 sm:w-36 aspect-square border border-border rounded-lg bg-white p-4 overflow-hidden"
+              aria-hidden={i >= carouselClients.length}
             >
               <Image
                 src={client.logo}
                 alt={client.name}
                 width={144}
-                height={80}
-                className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                height={144}
+                className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
