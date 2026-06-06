@@ -21,7 +21,7 @@ export default function WhatsAppFloat() {
         opacity: { delay: 2, duration: 0.4 },
         y: { delay: 2.4, duration: 2, repeat: Infinity, ease: "easeInOut" },
       }}
-      className="fixed bottom-20 left-5 z-50 group"
+      className="fixed bottom-20 left-10 z-50 group"
     >
       <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-dark/90 text-text text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border shadow-lg">
         Chat with us
