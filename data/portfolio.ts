@@ -2,6 +2,26 @@ import type { Project } from "@/types";
 
 export const portfolio: Project[] = [
   {
+    id: "bhutan-echoes",
+    title: "Bhutan Echoes — Drukyul's Literature & Arts Festival",
+    client: "Bhutan Echoes",
+    category: "event",
+    date: "August 1, 2, and 3, 2025",
+    description:
+      "Play Studio delivered complete lighting and sound support for Bhutan Echoes: Drukyul's Literature & Arts Festival at the Royal University of Bhutan. Themed 'The Art of Being Human,' the festival brought together writers, musicians, and artists, and our team ensured every session and performance was presented with clarity and atmosphere.",
+    image: "/images/portfolio/bhutan-echoes.jpg",
+  },
+  {
+    id: "thimphu-mega-fest",
+    title: "Thimphu Mega Fest",
+    client: "Thimphu Mega Fest",
+    category: "event",
+    date: "July 9, 10, and 11, 2025",
+    description:
+      "Play Studio provided full-scale lighting and sound production for Thimphu Mega Fest at the Yangchenphug High School ground. Across three nights of live music, our team powered the main stage with a professional concert rig, delivering an energetic experience for the large crowds gathered each evening.",
+    image: "/images/portfolio/thimphu-mega-fest.jpg",
+  },
+  {
     id: "mama-mia-reimagined",
     title: "Mama Mia Reimagined",
     client: "Snow Leopard Theatre",
