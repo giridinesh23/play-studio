@@ -2,12 +2,28 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  BuildingOffice2Icon,
+  MusicalNoteIcon,
+  UserGroupIcon,
+  SpeakerWaveIcon,
+} from "@heroicons/react/24/outline";
 import { staggerContainer, staggerItem, fadeInUp } from "@/lib/animations";
 import { packages } from "@/data/packages";
 import PageHero from "@/components/layout/PageHero";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+
+const categoryIcons: Record<
+  string,
+  React.ComponentType<React.SVGProps<SVGSVGElement>>
+> = {
+  conference: BuildingOffice2Icon,
+  "solo-acoustic": MusicalNoteIcon,
+  "four-piece-band": UserGroupIcon,
+  "full-band": SpeakerWaveIcon,
+};
 
 export default function SoundLightingContent() {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -33,22 +49,35 @@ export default function SoundLightingContent() {
         <Container>
           {/* Category Tabs */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {packages.map((pkg, i) => (
-              <button
-                key={pkg.slug}
-                onClick={() => {
-                  setActiveCategory(i);
-                  setExpandedTiers(new Set());
-                }}
-                className={`px-5 py-2.5 rounded-full font-montserrat text-sm uppercase tracking-wider transition-all ${
-                  activeCategory === i
-                    ? "bg-accent text-dark"
-                    : "bg-card border border-border text-text-muted hover:text-accent hover:border-accent/30"
-                }`}
-              >
-                {pkg.name.replace(" Packages", "")}
-              </button>
-            ))}
+            {packages.map((pkg, i) => {
+              const Icon = categoryIcons[pkg.slug];
+              const isActive = activeCategory === i;
+              return (
+                <button
+                  key={pkg.slug}
+                  onClick={() => {
+                    setActiveCategory(i);
+                    setExpandedTiers(new Set());
+                  }}
+                  className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-montserrat text-sm uppercase tracking-wider transition-all duration-300 ${
+                    isActive
+                      ? "bg-gradient-to-r from-accent to-accent-hover text-dark shadow-[0_8px_24px_rgba(226,179,64,0.35)] scale-105"
+                      : "bg-card border border-border text-text-muted hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent hover:shadow-[0_6px_20px_rgba(226,179,64,0.10)]"
+                  }`}
+                >
+                  {Icon && (
+                    <Icon
+                      className={`h-4 w-4 shrink-0 transition-transform duration-300 ${
+                        isActive
+                          ? "text-dark"
+                          : "text-accent group-hover:scale-110"
+                      }`}
+                    />
+                  )}
+                  {pkg.name.replace(" Packages", "")}
+                </button>
+              );
+            })}
           </div>
 
           {/* Active Category */}
