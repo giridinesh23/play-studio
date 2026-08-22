@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   StarIcon,
@@ -25,6 +27,40 @@ const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>
   fire: FireIcon,
   "check-badge": CheckBadgeIcon,
 };
+
+function TeamPhoto({
+  name,
+  image,
+  placeholder,
+}: {
+  name: string;
+  image: string;
+  placeholder?: boolean;
+}) {
+  const [failed, setFailed] = useState(false);
+
+  if (placeholder || !image || failed) {
+    return (
+      <ImagePlaceholder
+        label={placeholder ? "Coming Soon" : name}
+        aspectRatio="aspect-[3/4]"
+      />
+    );
+  }
+
+  return (
+    <div className="relative aspect-[3/4] w-full overflow-hidden">
+      <Image
+        src={image}
+        alt={name}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
 
 export default function AboutContent() {
   return (
@@ -179,13 +215,14 @@ export default function AboutContent() {
               <motion.div
                 key={member.name}
                 variants={staggerItem}
-                className={`bg-card border border-border rounded-xl overflow-hidden gradient-border transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(124,92,252,0.1),0_0_60px_rgba(226,179,64,0.06)] ${
+                className={`group bg-card border border-border rounded-xl overflow-hidden gradient-border transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(124,92,252,0.1),0_0_60px_rgba(226,179,64,0.06)] ${
                   member.placeholder ? "opacity-60" : ""
                 }`}
               >
-                <ImagePlaceholder
-                  label={member.placeholder ? "Coming Soon" : member.name}
-                  aspectRatio="aspect-[3/4]"
+                <TeamPhoto
+                  name={member.name}
+                  image={member.image}
+                  placeholder={member.placeholder}
                 />
                 <div className="p-6">
                   <h3 className="font-montserrat font-semibold text-text">

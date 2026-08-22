@@ -3,9 +3,21 @@ import type { TeamMember } from "@/types";
 export const team: TeamMember[] = [
   {
     name: "Tenzin Kelden",
-    role: "Promoter",
-    bio: "The relationship builder at the heart of Play Studio — identifying new opportunities and cultivating the partnerships that fuel our growth.",
+    role: "Founder / Owner",
+    bio: "The driving force behind Play Studio — his vision and hands-on leadership have grown the company from just three speakers into one of Bhutan's most trusted names in professional audio-visual production.",
     image: "/images/team/tenzin-kelden.jpg",
+  },
+  {
+    name: "Emanuel Flückiger",
+    role: "Partner",
+    bio: "A partner who has served Bhutan through this craft for many years, bringing world-class sound and lighting expertise along with a deep commitment to the country's growing events industry.",
+    image: "/images/team/emanuel-fluckiger.jpg",
+  },
+  {
+    name: "Walker Barnerd",
+    role: "Advisor",
+    bio: "A trusted advisor to Play Studio, offering strategic guidance and industry perspective that help shape the company's direction and long-term growth.",
+    image: "/images/team/walker-barnerd.jpg",
   },
   {
     name: "Dinesh Giri",
@@ -15,22 +27,26 @@ export const team: TeamMember[] = [
   },
   {
     name: "Dorji Namgay",
-    role: "System Engineer / Audio Technician",
+    role: "Light Designer / Audio Technician",
     bio: "With years of hands-on experience, he brings a calm, seasoned presence to every setup — making the complex look effortless and keeping the team one step ahead.",
-    image: "/images/team/dorji-namgay.jpg",
+    image: "/images/team/dorji-namgay-v2.jpg",
   },
   {
-    name: "Sonam Phuntsho",
-    role: "Light Designer",
-    bio: "When it comes to lighting, his designs do more than illuminate — they set the mood, shape the energy, and elevate the entire experience of the event.",
-    image: "/images/team/sonam-phuntsho.jpg",
+    name: "Sonam Tshering",
+    role: "Light Designer / Electrical Engineer",
+    bio: "Shaping both the look and the power of every show — designing stage lighting that sets the mood while ensuring each setup is wired safely and reliably, from distribution to the technical backbone that keeps the night running.",
+    image: "/images/team/sonam-tshering-v2.jpg",
   },
   {
-    name: "Coming Soon",
-    role: "Team Member",
-    bio: "A new addition to the Play Studio family. Details coming soon.",
-    image: "/images/team/placeholder.jpg",
-    placeholder: true,
-    // TODO: 5th team member name, title, bio, and photo to be provided
+    name: "Ganesh Adhikari",
+    role: "Finance & Accounts",
+    bio: "With a strong foundation in financial management, accounting, and business administration, he handles financial statements, budgeting, and cost management with a sharp eye for detail — keeping Play Studio's operations efficient and growth-ready.",
+    image: "/images/team/ganesh-adhikari.jpg",
+  },
+  {
+    name: "Phuntsho Tobden",
+    role: "Media Marketing",
+    bio: "The face behind Play Studio's presence — building relationships, spreading the word, and capturing the moments that tell our story across every screen and stage.",
+    image: "/images/team/phuntsho-tobden.jpg",
   },
 ];
