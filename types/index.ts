@@ -45,6 +45,7 @@ export interface EquipmentItem {
   quantity: number;
   category: string;
   description: string;
+  image?: string;
 }
 
 export interface EquipmentLine {

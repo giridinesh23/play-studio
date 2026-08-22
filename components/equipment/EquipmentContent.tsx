@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 import { equipment, equipmentCategories } from "@/data/equipment";
@@ -63,19 +64,44 @@ export default function EquipmentContent() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="bg-card border border-border rounded-xl p-6 hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
+                  className="group flex flex-col overflow-hidden bg-card border border-border rounded-xl hover:border-accent/30 hover:shadow-[0_0_30px_rgba(226,179,64,0.08)] transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-accent text-xs uppercase tracking-wider bg-accent/10 px-2 py-0.5 rounded">
+                  {/* Product image */}
+                  <div className="relative h-44 overflow-hidden bg-[radial-gradient(circle_at_50%_30%,#ffffff_0%,#e9edf3_100%)]">
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-contain p-5 drop-shadow-[0_10px_18px_rgba(15,27,42,0.18)] transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex h-full flex-col items-center justify-center">
+                        <span className="font-montserrat text-2xl font-bold tracking-wide text-primary/70">
+                          {item.brand}
+                        </span>
+                        <span className="mt-1 text-xs uppercase tracking-wider text-primary/40">
+                          {item.category}
+                        </span>
+                      </div>
+                    )}
+                    <span className="absolute top-3 right-3 rounded-full bg-dark/80 px-2.5 py-1 text-xs font-semibold text-text backdrop-blur-sm">
+                      x{item.quantity}
+                    </span>
+                  </div>
+
+                  {/* Details */}
+                  <div className="flex flex-1 flex-col p-6">
+                    <span className="mb-3 inline-block w-fit rounded bg-accent/10 px-2 py-0.5 text-xs uppercase tracking-wider text-accent">
                       {item.category}
                     </span>
-                    <span className="text-text-muted text-sm">x{item.quantity}</span>
+                    <h3 className="font-montserrat font-semibold text-text mb-1">
+                      {item.name}
+                    </h3>
+                    <p className="text-accent text-xs mb-2">{item.brand}</p>
+                    <p className="text-text-muted text-sm">{item.description}</p>
                   </div>
-                  <h3 className="font-montserrat font-semibold text-text mb-1">
-                    {item.name}
-                  </h3>
-                  <p className="text-accent text-xs mb-2">{item.brand}</p>
-                  <p className="text-text-muted text-sm">{item.description}</p>
                 </motion.div>
               ))}
             </AnimatePresence>
